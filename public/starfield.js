@@ -1,7 +1,6 @@
-import * as THREE from 'three';
+
 
 let scene, camera, renderer, stars, starGeo, starPoints;
-console.log("Stfwadaw");
 function init() {
     // Create a new scene
     scene = new THREE.Scene();
@@ -37,11 +36,20 @@ function init() {
     starGeo.setAttribute('position', new THREE.BufferAttribute(stars, 3));
 
     // Create a material for the stars
-    let starMaterial = new THREE.PointsMaterial({ color: 0xFFFFFF, size: 0.7 });
+    let starMaterial = new THREE.PointsMaterial({ 
+        color: 0xFFFFFF, 
+        size: 1.5,
+        opacity: 0.8,  // Adjust as needed
+        transparent: true,
+        blending: THREE.AdditiveBlending
+    });
+    
   
     // Create a points mesh to render the stars
     starPoints = new THREE.Points(starGeo, starMaterial);
     scene.add(starPoints);
+
+    
 
     // Handle window resizing
     window.addEventListener('resize', onWindowResize, false);
@@ -49,16 +57,18 @@ function init() {
     animate();
 }
 
+
+
 function animate() {
     // Rotate the starfield for some dynamism
     starPoints.rotation.x += 0.002;
-
 
     // Render the scene with the camera
     renderer.render(scene, camera);
 
     // Request the next frame
     requestAnimationFrame(animate);
+
 }
 
 function onWindowResize() {
