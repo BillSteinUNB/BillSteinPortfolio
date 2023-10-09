@@ -113,7 +113,7 @@ h1 {
     left: -25%;
     transform: rotate(83deg);
     scale: .35;
-    transition: left 1s ease;
+    transition: left 1s ease, transform 1s ease;
 }
 
 #leftArrow, #rightArrow {
