@@ -4,10 +4,12 @@ body {
     font-family: 'SpaceFont';
     background-color: transparent; /* Dark background */
     color: white; /* White text */
+    min-height: 100vh;
+    margin-bottom: 200px !important;
     
 }
 body h1{
-    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #3e353e, 0 0 20px #3e353e, 0 0 25px #3e353e;
+    text-shadow: 0 0 5px #404040, 0 0 10px #404040, 0 0 15px #fff, 0 0 20px #fff, 0 0 25px #fff;
 }
 
 canvas {
@@ -78,3 +80,60 @@ h1 {
     font-size: 3rem;
     background:  transparent !important;
 }
+
+.scene {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: visible;
+    height: 500px; /* Adjust as needed */
+}
+
+.planet {
+    display: none; /* Initially hide all planets */
+    position: absolute;
+    top: 135%;
+    left: 47%;
+    transform: translate(-50%, -50%);
+    padding-bottom: 300px;
+    scale: .9;
+    overflow: visible;
+    
+}
+
+#planet1 {
+    display: block; /* Show the first planet */
+
+    
+}
+
+#rocket {
+    position: absolute;
+    bottom: -65%; /* Adjust as needed */
+    left: -25%;
+    transform: rotate(83deg);
+    scale: .35;
+    transition: left 1s ease;
+}
+
+#leftArrow, #rightArrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    background: wheat;
+    border: none;
+    cursor: pointer;
+    scale: .6;
+}
+
+#leftArrow {
+    left: 10px;
+}
+
+#rightArrow {
+    right: 10%;
+}
+
+
+

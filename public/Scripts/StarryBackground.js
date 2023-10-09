@@ -19,8 +19,8 @@ function init() {
 
     // Starfield
     starGeo = new THREE.BufferGeometry();
-    stars = new Float32Array(1000 * 3);
-    for (let i = 0; i < 1000; i++) {
+    stars = new Float32Array(3000 * 3);
+    for (let i = 0; i < 3000; i++) {
         let x = (Math.random() - 0.5) * 2000;
         let y = (Math.random() - 0.5) * 2000;
         let z = (Math.random() - 0.5) * 2000;
@@ -29,7 +29,7 @@ function init() {
         stars[i * 3 + 2] = z;
     }
     starGeo.setAttribute('position', new THREE.BufferAttribute(stars, 3));
-    let starMaterial = new THREE.PointsMaterial({ color: 0xFFFFFF, size: 1.5, opacity: 0.8, transparent: true, blending: THREE.AdditiveBlending });
+    let starMaterial = new THREE.PointsMaterial({ color: 0xFFFFFF, size: 2, opacity: 0.8, transparent: true, blending: THREE.AdditiveBlending });
     starPoints = new THREE.Points(starGeo, starMaterial);
     scene.add(starPoints);
 
@@ -71,7 +71,7 @@ function createShootingStar() {
 
 function animate() {
     // Starfield Rotation
-     starPoints.rotation.x += 0.002;
+     starPoints.rotation.x += 0.001;
 
     // Shooting Star Animation
     if (shootingStar) {

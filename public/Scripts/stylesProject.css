@@ -164,7 +164,7 @@ h1 {
 .grid-item {
     width: 250px; /* fixed width */
     height: 250px; /* fixed height, same as width to make it a square */
-    background-color: grey;
+    background-color: transparent;
     transition: transform 0.3s ease;
     position: relative;
     overflow: visible;
