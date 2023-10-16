@@ -22,7 +22,7 @@
             rocket.style.left = '100%';
         } else {
             rocket.style.transform = 'rotate(-83deg)';
-            rocket.style.left = '-10%';
+            rocket.style.left = '-50%';
         }
     
         // Use a timeout to wait for the rocket to move off the screen
@@ -35,13 +35,15 @@
             if (direction === 1) {
                 rocket.style.left = '-10%';
             } else {
-                rocket.style.left = '100%';
+                rocket.style.left = '50%';
             }
     
             // Use another timeout to wait for the rocket to move back onto the screen
             setTimeout(() => {
                 rocket.style.transform = 'rotate(0deg)';
-                rocket.style.left = '50%';
+                rocket.style.left = '7%';
+                rocket.style.top = '-30%';
+                rocket.src = "/Space/RocketOff.png"; 
             }, 1000);
         }, 1000);
     }

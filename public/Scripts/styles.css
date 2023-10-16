@@ -3,9 +3,10 @@ body {
     padding: 0;
     font-family: 'SpaceFont';
     background-color: transparent; /* Dark background */
-    color: white; /* White text */
+    color: #ffffff; /* White text */
     min-height: 100vh;
     margin-bottom: 200px !important;
+    overflow-x: hidden;
     
 }
 body h1{
@@ -66,13 +67,25 @@ nav a:hover{
 .social-media a {
     width: 40px;
     height: 40px;
-    display: block;
+    display: inline-block;
     background-color: white; /* Placeholder background for social media icons */
     border-radius: 50%;
+    overflow: hidden;
 }
-.social-media a:hover{
-    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #ff00ff, 0 0 20px #ff00ff, 0 0 25px #ff00ff;
+.social-media a img {
+    display: block;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for scaling and glowing */
 }
+
+.social-media a:hover {
+    transform: scale(1.2);
+    box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #fff, 0 0 25px #fff; /* Glow effect */
+}
+
+.social-media a:hover img {
+    transform: scale(1.2); /* Increase the size by 10% on hover */
+}
+
 
 h1 {
     text-align: center !important;
@@ -142,13 +155,6 @@ h1 {
     scale: .6;
 }
 
-#leftArrow {
-    left: 10px;
-}
-
-#rightArrow {
-    right: 10%;
-}
 
 @keyframes titlePop {
     0% {
@@ -167,6 +173,44 @@ h1 {
         
     }
 }
+
+#leftArrow, #rightArrow {
+    /* ... other styles ... */
+    background: none; /* remove any background color */
+    border: none; /* remove any borders */
+    padding: 0; /* remove padding */
+    position: absolute;
+    top: 100% !important;
+    
+}
+
+#leftArrow img, #rightArrow img {
+    width: 110px; /* adjust as needed */
+    height: 110px; /* adjust as needed */
+    
+}
+
+#leftArrow img {
+    transform: rotate(-45deg); /* rotate counter-clockwise */
+}
+
+#rightArrow img {
+    transform: rotate(45deg); /* rotate clockwise */
+}
+
+#rightArrow{
+    right: 5% !important;
+}
+#leftArrow{
+    left: 5% !important;
+}
+
+img {
+    pointer-events: none;
+}
+
+
+
 
 
 
