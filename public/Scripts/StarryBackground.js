@@ -1,4 +1,6 @@
 let scene, camera, renderer, stars, starGeo, starPoints, shootingStar, shootingStarMaterial, shootingStarGeo;
+const clock = new THREE.Clock();
+
 
 
 function init() {
@@ -70,8 +72,10 @@ function createShootingStar() {
 
 
 function animate() {
+
+    const deltaTime = clock.getDelta();
     // Starfield Rotation
-     starPoints.rotation.x += 0.001;
+     starPoints.rotation.x += .05 * deltaTime;
 
     // Shooting Star Animation
     if (shootingStar) {
