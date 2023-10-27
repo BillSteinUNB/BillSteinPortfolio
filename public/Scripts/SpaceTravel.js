@@ -15,7 +15,8 @@
         if ((currentPlanet === 1 && direction === -1) || (currentPlanet === totalPlanets && direction === 1)) {
             return; // Don't move if at the start or end
         }
-    
+        
+        rocket.src = "/Space/Rocket.png";
         // Rotate and move the rocket off the screen
         if (direction === 1) {
             rocket.style.transform = 'rotate(83deg)';
@@ -31,22 +32,32 @@
             currentPlanet += direction;
             document.getElementById(`planet${currentPlanet}`).style.display = 'block';
     
+            rocket.style.transition = 'none';
             // Move the rocket back onto the screen from the opposite side
             if (direction === 1) {
-                rocket.style.left = '-10%';
+                rocket.style.left = '-50%';
             } else {
-                rocket.style.left = '50%';
+                rocket.style.left = '100%';
             }
+            
+            void rocket.offsetWidth;
     
-            // Use another timeout to wait for the rocket to move back onto the screen
+            // Add a slight delay before the rocket starts moving to the center
             setTimeout(() => {
-                rocket.style.transform = 'rotate(0deg)';
+                rocket.style.transition = 'left 1s ease, transform 1s ease'; // Increased time for visibility
                 rocket.style.left = '7%';
-                rocket.style.top = '-30%';
-                rocket.src = "/Space/RocketOff.png"; 
-            }, 1000);
+    
+                setTimeout(() => {
+                    rocket.style.transform = 'rotate(0deg)';
+                    setTimeout(() => {
+                        // Slowly descend the rocket
+                        rocket.style.transition = 'top 2s ease'; 
+                        rocket.style.top = '-30%';
+                        rocket.src = "/Space/RocketOff.png"; 
+                    }, 2000); // Added delay for the rotation
+                }, 2000); // Increased time for visibility
+            }, 500); // Added delay before the rocket starts moving to the center
         }, 1000);
     }
-    
 
 
