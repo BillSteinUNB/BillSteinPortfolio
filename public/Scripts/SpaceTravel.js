@@ -17,6 +17,10 @@
         }
         
         rocket.src = "/Space/Rocket.png";
+    
+        // Set the initial transition for the takeoff
+        rocket.style.transition = 'left 1s ease, transform 1s ease';
+    
         // Rotate and move the rocket off the screen
         if (direction === 1) {
             rocket.style.transform = 'rotate(83deg)';
@@ -33,7 +37,7 @@
             document.getElementById(`planet${currentPlanet}`).style.display = 'block';
     
             rocket.style.transition = 'none';
-            // Move the rocket back onto the screen from the opposite side
+            // Reposition the rocket on the opposite side
             if (direction === 1) {
                 rocket.style.left = '-50%';
             } else {
@@ -42,22 +46,21 @@
             
             void rocket.offsetWidth;
     
-            // Add a slight delay before the rocket starts moving to the center
-            setTimeout(() => {
-                rocket.style.transition = 'left 1s ease, transform 1s ease'; // Increased time for visibility
-                rocket.style.left = '7%';
+            // Start moving the rocket to the center immediately
+            rocket.style.transition = 'left 0.8s ease, transform 1s ease'; 
+            rocket.style.left = '7%';
     
+            // Start the rotation slightly before the rocket reaches the center
+            setTimeout(() => {
+                rocket.style.transform = 'rotate(0deg)';
+                // Once the rotation is done, start the descent
                 setTimeout(() => {
-                    rocket.style.transform = 'rotate(0deg)';
-                    setTimeout(() => {
-                        // Slowly descend the rocket
-                        rocket.style.transition = 'top 2s ease'; 
-                        rocket.style.top = '-30%';
-                        rocket.src = "/Space/RocketOff.png"; 
-                    }, 2000); // Added delay for the rotation
-                }, 2000); // Increased time for visibility
-            }, 500); // Added delay before the rocket starts moving to the center
-        }, 1000);
+                    rocket.style.transition = 'top 2s ease'; 
+                    rocket.style.top = '-30%';
+                    rocket.src = "/Space/RocketOff.png"; 
+                }, 800); // Delay for the rotation
+            }, 600); // Reduced time to start the rotation slightly earlier
+        }, 800);
     }
 
 
