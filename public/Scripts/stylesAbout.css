@@ -1,0 +1,112 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'SpaceFont';
+    background-color: transparent; /* Dark background */
+    color: white; /* White text */
+    
+}
+body h1{
+    justify-content: center;
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #3e353e, 0 0 20px #3e353e, 0 0 25px #3e353e;
+}
+
+canvas {
+    display: block;
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    background-color: transparent; /* Slightly lighter than the background for contrast */
+}
+
+@font-face {
+    font-family: SpaceFont;
+    src: url('/SpaceFont.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+nav {
+    display: flex;
+    gap: 1rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    transition: text-shadow 0.2s ease;
+    margin-right: 0px;  /* This will add space between the links */
+}
+
+nav a:hover{
+    text-decoration: underline;
+    color: pink;
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #ff00ff, 0 0 20px #ff00ff, 0 0 25px #ff00ff;
+}
+.social-media {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-media a {
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    background-color: white; /* Placeholder background for social media icons */
+    border-radius: 50%;
+    overflow: hidden;
+}
+.social-media a img {
+    display: block;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for scaling and glowing */
+}
+
+.social-media a:hover {
+    transform: scale(1.2);
+    box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #fff; /* Glow effect */
+}
+
+.social-media a:hover img {
+    transform: scale(1.2); /* Increase the size by 10% on hover */
+}
+
+h1 {
+    text-align: center;
+    justify-content: center;
+    margin-top: 7%;
+    font-size: 3rem;
+    background:  transparent !important;
+}
+.about-section {
+    padding: 20px;
+    /* Additional styling as needed */
+}
+
+.about-content p {
+    font-size: 1.2rem; /* Adjust the font size as needed */
+    color: white; /* Text color */
+    line-height: 1.6; /* Adjust line height for readability */
+    text-align: center; /* Center the text */
+    max-width: 600px !important; /* Maximum width of the paragraph */
+    margin: 0 auto; /* Center the paragraph block horizontally */
+    /* Additional styling as needed */
+}
+
+.placeholder-box {
+    width: 100%; /* Full width of the container */
+    height: 200px; /* Adjust the height as needed */
+    background-color: grey; /* Placeholder color */
+    margin-top: 20px; /* Space between the paragraph and the box */
+    /* Additional styling as needed */
+}

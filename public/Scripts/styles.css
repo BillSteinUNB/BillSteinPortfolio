@@ -209,8 +209,14 @@ img {
     pointer-events: none;
 }
 
+@media screen and (min-width: 1920px) and (min-height: 1080px) {
+   
+}
 
-
+/* Styles for 1440p monitors */
+@media screen and (min-width: 2560px) and (min-height: 1440px) {
+    
+}
 
 
 
