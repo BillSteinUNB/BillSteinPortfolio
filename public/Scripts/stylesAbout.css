@@ -104,9 +104,10 @@ h1 {
 }
 
 .placeholder-box {
-    width: 100%; /* Full width of the container */
-    height: 200px; /* Adjust the height as needed */
+    width: 60%; /* Full width of the container */
+    height: 800px;
+    margin: 0 auto; /* Adjust the height as needed */
     background-color: grey; /* Placeholder color */
-    margin-top: 20px; /* Space between the paragraph and the box */
+    margin-top: 30px; /* Space between the paragraph and the box */
     /* Additional styling as needed */
 }
