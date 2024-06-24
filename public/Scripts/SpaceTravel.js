@@ -34,7 +34,7 @@
         setTimeout(() => {
             document.getElementById(`planet${currentPlanet}`).style.display = 'none';
             currentPlanet += direction;
-            document.getElementById(`planet${currentPlanet}`).style.display = 'block';
+            document.getElementById(`planet${currentPlanet}`).style.display = 'flex';
     
             rocket.style.transition = 'none';
             // Reposition the rocket on the opposite side
