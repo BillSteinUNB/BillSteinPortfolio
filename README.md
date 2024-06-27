@@ -54,18 +54,13 @@ My primary goal in this project was to create a centralized platform to showcase
 ## Contact
 
 Bill Stein - billsteinm03@gmail.com
-  <p align="center">
-    <a href="https://www.billsteincs.com">My Portfolio</a>
-  </p>
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="left">(<a href="#readme-top">back to top</a>)</p>
 
 
 
 
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/billstein3714982/
-[product-screenshot]: images/screenshot.png
 [Astro.js]: https://img.shields.io/badge/Astro-BC52EE?style=for-the-badge&logo=astro&logoColor=white
 [Astro-url]: https://astro.build/
 [Nginx.dev]: https://img.shields.io/badge/Nginx-808080?style=for-the-badge&logo=nginx&logoColor=white
