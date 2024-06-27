@@ -203,7 +203,7 @@ Project Link: [https://github.com/github_username/repo_name](https://github.com/
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/linkedin_username
 [product-screenshot]: images/screenshot.png
-[Astro.js]: https://img.shields.io/badge/Astro?logo=%23BC52EE
+[Astro.js]: https://img.shields.io/badge/Astro-BC52EE?style=flat&logo=astro&logoColor=white
 [Astro-url]: https://astro.build/
 [React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
 [React-url]: https://reactjs.org/
