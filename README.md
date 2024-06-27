@@ -1,13 +1,12 @@
 
 <a id="readme-top"></a>
 
-* [![LinkedIn][linkedin-shield]][linkedin-url]
+[![LinkedIn][linkedin-shield]][linkedin-url]
 
 <h3 align="center">Bill Stein Portfolio</h3>
 
   <p align="center">
-    This is my personal portfolio that I have been working on for a while, while exploring you can see a collection of my work, skills, interests and more. Along with my own personal twist 
-  adopting a space theme!
+    This is my personal portfolio, which I have been developing over time. As you explore, you will discover a collection of my work, skills, and interests, all uniquely presented in my own way.
     <br />
     <a href="https://www.billsteincs.com">View Demo</a>
   </p>
@@ -17,7 +16,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-I Mainly wanted to have a way to display all of my best work in one place while also giving me a platform to learn, experiment and build something from nothing. Being able to choose a featue I want to deploy and learn how to do so from the ground up has been a great experience for me.
+My primary goal in this project was to create a centralized platform to showcase my best work, while simultaneously providing an opportunity for learning, experimentation, and the ability to build something from scratch. Being able to select features to deploy and learn how to develop them from the ground up has been an incredibly rewarding experience.
 
 ### Built With
 
@@ -26,9 +25,6 @@ I Mainly wanted to have a way to display all of my best work in one place while 
 * [![Node][Node.js]][Node-url]
 * [![Ubuntu][Ubuntu.dev]][Ubuntu-url]
 * [![DigitalOcean][DigOce.dev]][DigOce-url]
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 
 ## Roadmap
 
@@ -58,8 +54,9 @@ I Mainly wanted to have a way to display all of my best work in one place while 
 ## Contact
 
 Bill Stein - billsteinm03@gmail.com
-
-Project Link: [https://www.billsteincs.com](BillSteinCS.com)
+  <p align="center">
+    <a href="https://www.billsteincs.com">My Portfolio</a>
+  </p>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
