@@ -73,10 +73,7 @@ Here's a blank template to get started: To avoid retyping too much info. Do a se
 * [![Nginx][Nginx.dev]][Nginx-url]
 * [![Node][Node.js]][Node-url]
 * [![Ubuntu][Ubuntu.dev]][Ubuntu-url]
-* [![Svelte][Svelte.dev]][Svelte-url]
-* [![Laravel][Laravel.com]][Laravel-url]
-* [![Bootstrap][Bootstrap.com]][Bootstrap-url]
-* [![JQuery][JQuery.com]][JQuery-url]
+* [![DigitalOcean][DigOce.dev]][DigOce-url]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
