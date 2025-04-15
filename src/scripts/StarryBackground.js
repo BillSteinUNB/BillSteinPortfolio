@@ -23,7 +23,7 @@ function init() {
         }
         renderer = new THREE.WebGLRenderer({ canvas: canvas, antialias: true });
         renderer.setSize(window.innerWidth, window.innerHeight);
-        renderer.setClearColor(0x000000);  // Set to black
+        renderer.setClearColor(0x222222);
 
         // Starfield
         starGeo = new THREE.BufferGeometry();

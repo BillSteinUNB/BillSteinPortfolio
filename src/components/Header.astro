@@ -40,7 +40,7 @@
     display: flex !important;
     justify-content: space-between !important;
     align-items: center !important;
-    padding: 1rem 1rem 1rem 2rem !important; /* Reduced right padding */
+    padding: 1rem 1rem 1rem 1rem !important; /* Reduced right padding */
     /* box-shadow removed */
   }
 
@@ -52,7 +52,7 @@
   }
 
   .social-media-container {
-    width: 200px; /* Set a fixed width */
+    width: 250px; /* Set a fixed width */
     height: 30px; /* Set a fixed height */
     -webkit-overflow-scrolling: touch; /* Enable smooth scrolling on iOS */
   }
@@ -63,6 +63,8 @@
 
   .social-media img {
     display: block; /* Prevents extra space below image */
+    width: 39px;
+    height: 39px;
     transition: transform 0.2s ease-in-out;
   }
    .social-media a:hover img {
@@ -80,6 +82,7 @@
     text-decoration: none;
     font-weight: 500;
     padding: 0.5rem 0;
+    font-size: 1.2rem;
     transition: color 0.2s ease-in-out;
     position: relative; /* For potential underline effect */
   }
