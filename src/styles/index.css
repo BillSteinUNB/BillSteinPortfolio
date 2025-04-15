@@ -1,0 +1,45 @@
+.hero-section {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  border-bottom: 1px solid #333; /* Example separator */
+}
+
+.hero-section h1 {
+  font-size: 3.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.hero-section p {
+  font-size: 1.5rem;
+  color: #aaa; /* Lighter text for tagline */
+}
+
+/* Inherit .page-section styles or define globally */
+.page-section {
+  min-height: 100vh;
+  padding: 60px 20px;
+  border-bottom: 1px solid #333;
+}
+
+.contact-section {
+  min-height: 50vh; /* Shorter section example */
+  text-align: center;
+}
+
+/* Inherit .page-section styles or define globally */
+.page-section {
+  min-height: 100vh;
+  padding: 60px 20px;
+  border-bottom: 1px solid #333; /* Remove border for last section if desired */
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
+}

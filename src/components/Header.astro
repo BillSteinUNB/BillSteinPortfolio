@@ -1,0 +1,109 @@
+---
+// src/components/Header.astro
+// Contains top bar (social/resume) and section navigation
+---
+<header class="main-header">
+  <!-- Navigation on the left -->
+  <nav class="section-nav">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <!-- Social media icons on the right -->
+  <div class="social-media-container">
+    <div class="social-media">
+        <a href="https://www.linkedin.com/in/billstein3714982" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile">
+          <img src="/photos/linkedin.png" alt="LinkedIn" width="24" height="24">
+        </a>
+        <a href="https://github.com/BillSteinUNB" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile">
+          <img src="/photos/github.png" alt="Github" width="24" height="24">
+        </a>
+        <a href="mailto:billsteinm03@gmail.com" aria-label="Send Email">
+          <img src="/photos/gmail.png" alt="Email" width="24" height="24">
+        </a>
+        <a href="/Bill Stein Resume.pdf" download aria-label="Download Resume">
+          <img src="/photos/Resume.png" alt="Download Resume" width="24" height="24">
+        </a>
+    </div>
+  </div>
+</header>
+
+<style>
+  .main-header {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    background-color: transparent !important; /* Make background transparent */
+    z-index: 1000 !important; /* Ensure it's above everything */
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    padding: 1rem 1rem 1rem 2rem !important; /* Reduced right padding */
+    /* box-shadow removed */
+  }
+
+  /* .top-bar class removed as it's no longer needed for structure */
+
+  .social-media {
+    display: flex;
+    gap: 1rem; /* Reduced gap */
+  }
+
+  .social-media-container {
+    width: 200px; /* Set a fixed width */
+    height: 30px; /* Set a fixed height */
+    -webkit-overflow-scrolling: touch; /* Enable smooth scrolling on iOS */
+  }
+
+  .social-media-container::-webkit-scrollbar {
+    display: none; /* Hide scrollbar on Chrome, Safari and Opera */
+  }
+
+  .social-media img {
+    display: block; /* Prevents extra space below image */
+    transition: transform 0.2s ease-in-out;
+  }
+   .social-media a:hover img {
+     transform: scale(1.1); /* Slight zoom on hover */
+   }
+
+  .section-nav {
+    display: flex;
+    gap: 1rem; /* Reduced space between nav links */
+    margin-right: 2rem; /* Add right margin to section-nav */
+  }
+
+  .section-nav a {
+    color: #eee; /* Light color for links */
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.5rem 0;
+    transition: color 0.2s ease-in-out;
+    position: relative; /* For potential underline effect */
+  }
+
+  .section-nav a:hover {
+    color: #fff; /* Brighter on hover */
+  }
+
+  /* Optional: Add an underline effect on hover/active */
+  .section-nav a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--accent, #883aea); /* Use accent color */
+    transition: width 0.3s ease-in-out;
+  }
+
+  .section-nav a:hover::after {
+     width: 100%;
+  }
+
+  /* TODO: Add active link styling based on scroll position (requires JS) */
+
+</style>

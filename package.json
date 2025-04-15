@@ -1,5 +1,12 @@
 {
   "name": "billsteinportfolio",
+  "private": true,
+  "author": "Bill Stein",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/BillSteinPortfolio/billsteinportfolio"
+  },
   "type": "module",
   "version": "0.0.1",
   "scripts": {
@@ -10,7 +17,14 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^3.6.5",
-    "three": "^0.157.0"
+    "astro": "^5.7.0",
+    "three": "^0.175.0"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^8.30.1",
+    "@typescript-eslint/parser": "^8.30.1",
+    "eslint": "^9.24.0",
+    "prettier": "^3.5.3",
+    "typescript": "^5.8.3"
   }
 }

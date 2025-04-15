@@ -1,108 +1,75 @@
 ---
-// Import the CSS file
+// src/pages/index.astro - Main Single-Page Application Container
+import Layout from '../layouts/Layout.astro';
+import AboutSection from '../components/AboutSection.astro';
+import ProjectsSection from '../components/ProjectsSection.astro';
+
+// Define page title
+const pageTitle = "Bill Stein - Portfolio";
 ---
+<Layout title={pageTitle}>
+  <!-- Hero Section Placeholder -->
+  <section id="home" class="page-section hero-section">
+    <h1>Bill Stein</h1>
+    <p>Software Developer | [Your Tagline Here]</p>
+    <!-- TODO: Add more content, styling, and potentially a CTA -->
+    <style>
+      .hero-section {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+        border-bottom: 1px solid #333; /* Example separator */
+      }
+      .hero-section h1 {
+        font-size: 3.5rem;
+        margin-bottom: 0.5rem;
+      }
+      .hero-section p {
+        font-size: 1.5rem;
+        color: #aaa; /* Lighter text for tagline */
+      }
+      /* Inherit .page-section styles or define globally */
+       .page-section {
+        min-height: 100vh;
+        padding: 60px 20px;
+        border-bottom: 1px solid #333;
+      }
+    </style>
+  </section>
+   <style>
+      .contact-section {
+        min-height: 50vh; /* Shorter section example */
+        text-align: center;
+      }
+       /* Inherit .page-section styles or define globally */
+       .page-section {
+        min-height: 100vh;
+        padding: 60px 20px;
+        border-bottom: 1px solid #333; /* Remove border for last section if desired */
+      }
+       h2 {
+        text-align: center;
+        margin-bottom: 2rem;
+        font-size: 2.5rem;
+      }
+    </style>
 
-<body>
-  <div class="main-container">
-    <header>
-      <script type="module" src="https://cdn.jsdelivr.net/npm/three@0.157.0/build/three.js"></script>
-      <script type="module" src="/Scripts/StarryBackground.js" is:inline></script>
-      <link rel="stylesheet" type="text/css" href="/Scripts/styles.css"> <!-- Link to the CSS file -->
-      
-      <nav>
-        <a href="/projects" class="projects">PROJECTS</a>
-        <a href="/about" class="about">ABOUT</a>
-      </nav>
-      <div class="social-media">
-        <a href="https://www.linkedin.com/in/billstein3714982">
-          <img src="/photos/linkedin.png" alt="LinkedIn" width="40" height="40">
-        </a>
-        <a href="https://github.com/BillSteinUNB">
-          <img src="/photos/github.png" alt="Github" width="40" height="40">
-        </a>
-        <a href="mailto:billsteinm03@gmail.com">
-          <img src="/photos/gmail.png" alt="Email" width="40" height="40">
-        </a>
-        <a href="/Bill Stein Resume.pdf" download>
-          <img src="/photos/Resume.png" alt="Download PNG" width="40" height="40">
-        </a>
-      </div>
-    </header>
+  <!-- About Section -->
+  <AboutSection />
 
+  <!-- Projects Section -->
+  <ProjectsSection />
 
-  <main>
-    <h1>BILL STEIN</h1>
-
-      <!--PLANET STUFF -->
-      <div class="scene">
-        <div class="planet" id="planet1" data-color="Blue">
-          <img src="/Space/BluePlanet.png" alt="Blue Planet">
-        <div class = "text-container"></div>
-        <h2>YOU LANDED ON PLANET JAVA!</h2>
-        <p>I have done extensive work in Java, starting with the basics of learning OOP, making small programs such as login databases and GUI's. Doing extensive algorithm work and 
-          analysis in such fields. I am currently working on a 2 full scale programs which will eventually be live. These being a weight-tracking app for managing and graphing your weight overtime, this will involve
-          a full login system and a few algorithms working on user input. The second being a 
-            </p>
-        </div>
-        <div class="planet" id="planet2" data-color="Green">
-          <img src="/Space/GreenPlanet.png" alt="Green Planet">
-        <div class = "text-container"></div>
-        <h2>YOU LANDED ON PLANET FRONT-END!</h2>
-        <p>Some of my work in front-end involves this entire portfolio, along with the attached REDS website in my projects section. I am also working on a nutrition website that has been a personal project of mine for a while! </p>
-        </div>
-        <div class="planet" id="planet3" data-color="Orange">
-          <img src="/Space/OrangePlanet.png" alt="Orange Planet">
-        <div class = "text-container"></div>
-        <h2>YOU LANDED ON PLANET PYTHON!</h2>
-        <p>I have self learned everything I have done in python as at UNB it is not heavily offered, I have done some beginner projects such as calculators and
-          minigames. I have managed to make a working file transfer system between any 2 devices. Using stuff like pypng and pyqrcode to make them more ascessable as well.
-          I plan to scale this into a online aws server hosted program that can be used by anyone. 
-
-            </p>
-        </div>
-        <div class="planet" id="planet4" data-color="Pink">
-          <img src="/Space/PinkPlanet.png" alt="Pink Planet">
-        <div class = "text-container"></div>
-        <h2>YOU LANDED ON PLANET C!</h2>
-        <p>Some of my work in C includes implementing algorithms such as LRU, FIFO, BFS and others. I also did work in multi-threading and syncronization.    </p>
-        </div>
-        <div class="planet" id="planet5" data-color="Purple">
-          <img src="/Space/PurplePlanet.png" alt="Purple Planet">
-        <div class = "text-container"></div>
-        <h2>YOU LANDED ON PLANET SCRIPTS!</h2>
-        <p>Description for Purple Planet</p>
-        </div>
-        <div class="planet" id="planet6" data-color="Red">
-          <img src="/Space/RedPlanet.png" alt="Red Planet">
-        <div class = "text-container"></div>
-        <h2>YOU LANDED ON PLANET UNITY!</h2>
-        <p>I worked on a group project for a class, it was called "Shadow Navigators" This was a top down puzzle game, it was a 2d tileset made to look 3dlike, I was primarly incharge of game physics, puzzle design and Hit colliders. This project was done pretty quickly and taught me a lot about unity</p>
-        </div>
-        <div class="planet" id="planet7" data-color="Turquoise">
-          <img src="/Space/TurquoisePlanet.png" alt="Turquoise Planet">
-        <div class = "text-container"></div>
-        <h2>YOU LANDED ON A PLANET!</h2>
-        <p>Description for Turquoise Planet</p>
-        </div>
-        <div class="planet" id="planet8" data-color="Yellow">
-          <img src="/Space/YellowPlanet.png" alt="Yellow Planet">
-        <div class = "text-container"></div>
-        <h2>YOU LANDED ON A PLANET!</h2>
-        <p>Description for Yellow Planet</p>
-        </div>
-      
-
-        <img src="/Space/Rocket.png" alt="Rocket" id="rocket">
-        <button id="leftArrow">
-          <img src="/Space/leftArrow.png" alt="Left Arrow">
-        </button>
-        <button id="rightArrow">
-          <img src="/Space/rightArrow.png" alt="Right Arrow">
-        </button>
-      </div>
-    </main>
-  </div> <!-- End of .main-container -->
-
-  <script type="module" src="/Scripts/SpaceTravel.js" is:inline></script>
-  <script type="module" src="/Scripts/PhotoProtect.js" is:inline></script>
-</body>
+  <!-- Contact Section Placeholder -->
+  <section id="contact" class="page-section contact-section">
+    <h2>Contact Me</h2>
+    <p>
+      Placeholder for contact information (Email, LinkedIn) or a contact form.
+      <!-- TODO: Add actual contact details/form -->
+    </p>
+  </section>
+</Layout>
