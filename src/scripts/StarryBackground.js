@@ -1,9 +1,8 @@
 import * as THREE from 'three';
+import { TextureLoader } from 'three';
 
 let scene, camera, renderer, stars, starGeo, starPoints, shootingStar, shootingStarMaterial, shootingStarGeo;
 const clock = new THREE.Clock();
-
-
 
 
 function init() {
@@ -29,17 +28,36 @@ function init() {
         // Starfield
         starGeo = new THREE.BufferGeometry();
         stars = new Float32Array(1500 * 3);
+        const sizes = new Float32Array(1500);
+
         for (let i = 0; i < 1500; i++) {
             let x = (Math.random() - 0.5) * 2000;
             let y = (Math.random() - 0.5) * 2000;
             let z = (Math.random() - 0.5) * 2000;
+
             stars[i * 3] = x;
             stars[i * 3 + 1] = y;
             stars[i * 3 + 2] = z;
+
+            // Randomize star sizes
+            sizes[i] = Math.random() * 1.5 + 0.5; // Size between 0.5 and 2
         }
+        starGeo.setAttribute('size', new THREE.BufferAttribute(sizes, 1));
         starGeo.setAttribute('position', new THREE.BufferAttribute(stars, 3));
-        let starMaterial = new THREE.PointsMaterial({ color: 0xFFFFFF, size: 2, opacity: 0.8, transparent: true, blending: THREE.AdditiveBlending });
+
+        const loader = new TextureLoader();
+        const texture1 = loader.load('/photos/sp1.png');
+        const texture2 = loader.load('/photos/sp2.png');
+
+        const starMaterial = new THREE.PointsMaterial({
+            size: 8,
+            map: texture1, // Use texture1 initially
+            transparent: true,
+            blending: THREE.AdditiveBlending,
+            sizeAttenuation: true // Enable size attenuation for perspective effect
+        });
         starPoints = new THREE.Points(starGeo, starMaterial);
+        starPoints.geometry.attributes.size.needsUpdate = true;
         scene.add(starPoints);
 
         // Shooting Star
@@ -87,6 +105,12 @@ function animate() {
         // Starfield Rotation
         starPoints.rotation.x += .05 * deltaTime;
 
+        // Twinkling effect: Alternate between the two textures
+        if (Math.random() < 0.02) { // Adjust probability for desired twinkling speed
+            starMaterial.map = (starMaterial.map === texture1) ? texture2 : texture1;
+            starMaterial.needsUpdate = true;
+        }
+
         // Shooting Star Animation
         if (shootingStar) {
             shootingStar.position.x += shootingStarSpeed * window.innerWidth;
@@ -100,12 +124,12 @@ function animate() {
             createShootingStar();
         }
 
-        // Render and Request Next Frame
-        renderer.render(scene, camera);
-        requestAnimationFrame(animate);
     } catch (error) {
         console.error("Animation failed:", error);
     }
+    // Render and Request Next Frame
+    renderer.render(scene, camera);
+    requestAnimationFrame(animate);
 }
 
 
