@@ -3,6 +3,10 @@ import { TextureLoader } from 'three';
 
 let scene, camera, renderer, stars, starGeo, starPoints, shootingStar, shootingStarMaterial, shootingStarGeo;
 const clock = new THREE.Clock();
+const loader = new TextureLoader();
+let starMaterial;
+const texture1 = loader.load('/photos/sp1.png');
+const texture2 = loader.load('/photos/sp2.png');
 
 
 function init() {
@@ -23,7 +27,7 @@ function init() {
         }
         renderer = new THREE.WebGLRenderer({ canvas: canvas, antialias: true });
         renderer.setSize(window.innerWidth, window.innerHeight);
-        renderer.setClearColor(0x222222);
+        renderer.setClearColor(0x111111);  // Darker grey, but not black (0x000000)
 
         // Starfield
         starGeo = new THREE.BufferGeometry();
@@ -40,14 +44,10 @@ function init() {
             stars[i * 3 + 2] = z;
 
             // Randomize star sizes
-            sizes[i] = Math.random() * 1.5 + 0.5; // Size between 0.5 and 2
+            sizes[i] = Math.random() * 1.0 + 0.5; // Size between 0.5 and 1.5
         }
         starGeo.setAttribute('size', new THREE.BufferAttribute(sizes, 1));
         starGeo.setAttribute('position', new THREE.BufferAttribute(stars, 3));
-
-        const loader = new TextureLoader();
-        const texture1 = loader.load('/photos/sp1.png');
-        const texture2 = loader.load('/photos/sp2.png');
 
         const starMaterial = new THREE.PointsMaterial({
             size: 8,
@@ -61,7 +61,7 @@ function init() {
         scene.add(starPoints);
 
         // Shooting Star
-        createShootingStar();
+        //createShootingStar();
 
         // Window Resize Event
         window.addEventListener('resize', onWindowResize, false);
@@ -112,7 +112,7 @@ function animate() {
         }
 
         // Shooting Star Animation
-        if (shootingStar) {
+        /*if (shootingStar) {
             shootingStar.position.x += shootingStarSpeed * window.innerWidth;
             shootingStar.position.y -= shootingStarSpeed * window.innerHeight;
 
@@ -122,7 +122,7 @@ function animate() {
             }
         } else if (Math.random() < 0.01) { // 0.5% chance to create a new shooting star
             createShootingStar();
-        }
+        }*/
 
     } catch (error) {
         console.error("Animation failed:", error);

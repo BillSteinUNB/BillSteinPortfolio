@@ -1,23 +1,80 @@
 ---
 // src/components/AboutSection.astro
-// Placeholder for the About content
 ---
-<section id="about" class="page-section">
-  <h2>About Me</h2>
-  <p>
-    This is the placeholder for the About section. Content from the old about page will go here.
-    <!-- TODO: Populate with content from src/pages/about.astro -->
-  </p>
+<section id="about" class="about-section page-section">
+  <div class="about-container">
+    <div class="about-content">
+      <div class="profile-icon">
+        {/* Placeholder for the profile icon */}
+      </div>
+      <h2>About</h2>
+      <p>
+        Fully committed to the philosophy of life-long learning, I'm a full stack developer with a deep passion for JavaScript,
+        React and all things web development. The unique combination of creativity, logic, technology and never
+        running out of new things to discover, drives my excitement and passion for web development. When I'm
+        not at my computer I like to spend my time reading, keeping fit and playing guitar.
+      </p>
+    </div>
+    <div class="tech-icons">
+      {/* Placeholder for the technology icons */}
+      <div class="tech-icon"></div>
+      <div class="tech-icon"></div>
+      <div class="tech-icon"></div>
+      <div class="tech-icon"></div>
+      <div class="tech-icon"></div>
+      <div class="tech-icon"></div>
+      <div class="tech-icon"></div>
+      <div class="tech-icon"></div>
+      <div class="tech-icon"></div>
+      <div class="tech-icon"></div>
+    </div>
+  </div>
   <style>
-    .page-section {
-      min-height: 100vh; /* Example: Make sections take full viewport height */
-      padding: 60px 20px; /* Add padding, adjust as needed */
-      border-bottom: 1px solid #333; /* Example separator */
+    .about-section {
+      padding: 4rem 0;
+      color: #fff;
     }
-    h2 {
+
+    .about-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    .about-content {
       text-align: center;
       margin-bottom: 2rem;
-      font-size: 2.5rem;
+    }
+
+    .profile-icon {
+      margin-bottom: 1rem;
+    }
+
+    h2 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-size: 1.2rem;
+      line-height: 1.6;
+    }
+
+    .tech-icons {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+    }
+
+    .tech-icon {
+      padding: 0.5rem 1rem;
+      border: 1px solid #fff;
+      border-radius: 0.5rem;
+      font-size: 1rem;
     }
   </style>
 </section>

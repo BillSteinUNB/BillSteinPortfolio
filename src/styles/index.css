@@ -1,20 +1,26 @@
-.hero-section {
-  min-height: 100vh;
+body {
+  background-color: #121212;
+  color: #fff;
+}
+
+.main-section {
+  min-height: 75vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
   padding: 20px;
-  border-bottom: 1px solid #333; /* Example separator */
 }
 
-.hero-section h1 {
+.main-section h1 {
   font-size: 3.5rem;
+  margin-top: -5vh;
   margin-bottom: 0.5rem;
+  padding-bottom: 1rem;
 }
 
-.hero-section p {
+.main-section p {
   font-size: 1.5rem;
   color: #aaa; /* Lighter text for tagline */
 }
@@ -23,7 +29,6 @@
 .page-section {
   min-height: 100vh;
   padding: 60px 20px;
-  border-bottom: 1px solid #333;
 }
 
 .contact-section {
@@ -35,7 +40,6 @@
 .page-section {
   min-height: 100vh;
   padding: 60px 20px;
-  border-bottom: 1px solid #333; /* Remove border for last section if desired */
 }
 
 h2 {

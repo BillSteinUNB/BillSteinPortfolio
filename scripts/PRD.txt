@@ -1,0 +1,195 @@
+# Overview
+A modern, performant portfolio website built with Astro.js that showcases professional work, skills, and experience. The portfolio serves as a personal brand platform, demonstrating technical expertise while providing an excellent user experience.
+
+# Core Features
+
+## 1. Landing Page & Navigation
+- Responsive header with smooth navigation
+- Main section featuring:
+  - Name and professional title
+  - Brief, impactful personal brand statement
+  - Call-to-action buttons (e.g., "View Projects", "Contact Me")
+- Mobile-responsive design with hamburger menu
+- Smooth scroll behavior between sections
+
+## 2. About Section
+- Professional introduction with personality
+- Key skills and technology expertise
+- Professional journey summary
+- Professional headshot/avatar
+- Downloadable resume/CV option
+- Social media/professional profile links
+
+## 3. Projects Showcase
+- Featured projects grid/layout
+- For each project:
+  - Project title and description
+  - Technologies used
+  - Preview image
+  - Links to live demo and GitHub repo
+  - Role and key contributions
+- Project filtering system by category/technology
+- Individual project detail pages with:
+  - Extended project description
+  - Challenge and solution narrative
+  - Technical implementation details
+  - Multiple project screenshots
+
+## 4. Contact Section
+- Professional contact information
+- Social media links (GitHub, LinkedIn)
+- Simple contact form with:
+  - Name
+  - Email
+  - Message
+  - Basic form validation
+- Success/error message handling
+
+# User Experience
+
+## Target Users
+1. **Potential Employers**
+   - Looking for technical expertise
+   - Want to see practical project examples
+   - Need easy access to resume and contact information
+
+2. **Fellow Developers**
+   - Interested in technical implementations
+   - Looking for code examples and solutions
+   - Potential collaborators
+
+3. **Clients/Project Stakeholders**
+   - Seeking evidence of past work
+   - Want to understand capabilities
+   - Need clear communication channels
+
+## Key User Flows
+1. **Project Discovery Flow**
+   - Land on homepage
+   - Navigate to projects section
+   - Filter projects by technology/category
+   - View project details
+   - Access live demo/GitHub
+   - Contact for opportunities
+
+2. **Professional Background Flow**
+   - View about section
+   - Read professional summary
+   - Download resume
+   - View social profiles
+   - Initiate contact
+
+# Technical Architecture
+
+## Frontend Architecture
+- Astro.js as the core framework
+- TypeScript for type safety
+- Responsive design with CSS/Tailwind
+- Component-based architecture
+- Static site generation for performance
+
+## Core Components
+1. Header.astro (Navigation)
+2. AboutSection.astro (Personal Info)
+3. ProjectsSection.astro (Work Showcase)
+4. Card.astro (Reusable Project Cards)
+5. ContactForm.astro (Communication)
+
+## Data Management
+- Static content in Markdown/MDX
+- Project data in structured format (JSON/YAML)
+- Form handling with server-side validation
+
+# Development Roadmap
+
+## Phase 1: Foundation (MVP)
+1. Project Setup & Structure
+   - Initialize Astro project ✅
+   - Set up TypeScript ✅
+   - Configure basic routing
+   - Implement base styling system
+
+2. Core Components Development
+   - Header & navigation ✅
+   - About section layout ✅
+   - Projects grid implementation ✅
+   - Contact form structure
+
+3. Content Population
+   - Personal introduction
+   - Initial project showcases
+   - Basic contact information
+   - Social media links
+
+## Phase 2: Enhancement
+1. Interaction & Animation
+   - Smooth scrolling
+   - Section transitions
+   - Hover effects
+   - Loading states
+
+2. Project Features
+   - Filtering system
+   - Detailed project pages
+   - Image galleries
+   - Live demo links
+
+## Phase 3: Polish
+1. Performance Optimization
+   - Image optimization
+   - Lazy loading
+   - Performance metrics
+   - Lighthouse score optimization
+
+2. SEO & Metadata
+   - Meta tags
+   - Open Graph data
+   - Sitemap
+   - robots.txt
+
+# Risks and Mitigations
+
+## Technical Challenges
+1. **Performance with Images**
+   - Mitigation: Implement proper image optimization
+   - Use Astro's built-in image optimization
+   - Implement lazy loading
+
+2. **Form Handling**
+   - Mitigation: Use secure form service
+   - Implement proper validation
+   - Add spam protection
+
+3. **Mobile Responsiveness**
+   - Mitigation: Mobile-first design approach
+   - Extensive cross-device testing
+   - Flexible layout system
+
+## MVP Scope
+1. **Feature Creep**
+   - Mitigation: Strict adherence to MVP features
+   - Regular scope review
+   - Prioritize must-have features
+
+2. **Content Management**
+   - Mitigation: Start with static content
+   - Plan for easy content updates
+   - Document content structure
+
+# Appendix
+
+## Performance Targets
+- Lighthouse score > 90
+- First Contentful Paint < 1.5s
+- Time to Interactive < 2s
+
+## Browser Support
+- Modern browsers (last 2 versions)
+- Mobile browsers
+- Progressive enhancement approach
+
+## Accessibility Requirements
+- WCAG 2.1 compliance
+- Keyboard navigation
+- Screen reader compatibility
+- Proper ARIA labels

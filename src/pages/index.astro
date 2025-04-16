@@ -8,35 +8,68 @@ import ProjectsSection from '../components/ProjectsSection.astro';
 const pageTitle = "Bill Stein - Portfolio";
 ---
 <Layout title={pageTitle}>
-  <!-- Hero Section Placeholder -->
-  <section id="home" class="page-section hero-section">
-    <h1>Bill Stein</h1>
-    <p>Software Developer | [Your Tagline Here]</p>
-    <!-- TODO: Add more content, styling, and potentially a CTA -->
+  <!-- Main Section -->
+  <section id="home" class="page-section main-section">
+    <div class="section-overlay">
+      <div class="main-content">
+        <h1 class="glow">Bill Stein</h1>
+        <p>Full Stack Developer</p>
+      </div>
+    </div>
     <style>
-      .hero-section {
+      .main-section {
         min-height: 100vh;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         text-align: center;
-        padding: 20px;
-        border-bottom: 1px solid #333; /* Example separator */
+        padding: 0px;
+        position: relative;
       }
-      .hero-section h1 {
-        font-size: 3.5rem;
-        margin-bottom: 0.5rem;
+
+      .main-content {
+        position: absolute;
+        top: 35%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
       }
-      .hero-section p {
-        font-size: 1.5rem;
-        color: #aaa; /* Lighter text for tagline */
+
+      .main-section h1 {
+        font-size: 5.5rem;
+        margin-bottom: 1rem;
+        font-weight: bold;
       }
+
+      .glow {
+        color: #fff;
+        text-shadow: 0 0 15px rgba(255, 255, 255, 0.5),
+                    0 0 25px rgba(255, 255, 255, 0.3),
+                    0 0 35px rgba(255, 255, 255, 0.2),
+                    0 0 45px rgba(255, 255, 255, 0.1),
+                    0 0 55px rgba(255, 255, 255, 0.05);
+        transition: text-shadow 0.3s ease;
+      }
+
+      .glow:hover {
+        text-shadow: 0 0 20px rgba(255, 255, 255, 0.6),
+                    0 0 30px rgba(255, 255, 255, 0.4),
+                    0 0 40px rgba(255, 255, 255, 0.3),
+                    0 0 50px rgba(255, 255, 255, 0.2),
+                    0 0 60px rgba(255, 255, 255, 0.1);
+      }
+
+      .main-section p {
+        font-size: 2.2rem;
+        color: #aaa;
+        margin-top: 0.5rem;
+      }
+
       /* Inherit .page-section styles or define globally */
-       .page-section {
+      .page-section {
         min-height: 100vh;
         padding: 60px 20px;
-        border-bottom: 1px solid #333;
       }
     </style>
   </section>
@@ -49,7 +82,6 @@ const pageTitle = "Bill Stein - Portfolio";
        .page-section {
         min-height: 100vh;
         padding: 60px 20px;
-        border-bottom: 1px solid #333; /* Remove border for last section if desired */
       }
        h2 {
         text-align: center;
@@ -60,15 +92,17 @@ const pageTitle = "Bill Stein - Portfolio";
 
   <!-- About Section -->
   <AboutSection />
-
-  <!-- Projects Section -->
-  <ProjectsSection />
+<!-- Projects Section -->
+<ProjectsSection />
+  
 
   <!-- Contact Section Placeholder -->
   <section id="contact" class="page-section contact-section">
-    <h2>Contact Me</h2>
-    <p>
-      Placeholder for contact information (Email, LinkedIn) or a contact form.
+    <div class="section-overlay">
+      <h2>Contact Me</h2>
+      <p>
+        Placeholder for contact information (Email, LinkedIn) or a contact form.
+    </div>
       <!-- TODO: Add actual contact details/form -->
     </p>
   </section>
